@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter From Your Body — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 29 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter From Your Body</h1>
+      <p class="dek">We have been meaning to thank you. Yes, all of us.</p>
+
+      <p class="salute">Dear Girl,</p>
+      <p><strong>Love, Your Body.</strong></p>
+      <p>We have been meaning to thank you.</p>
+      <p>Yes, ALL of us.</p>
+      <p>Your legs, for instance, would like you to know that they thoroughly enjoy your random dancing sessions in the kitchen.</p>
+      <p>Although they would appreciate a little warning before you suddenly decide you are in a music video.</p>
+      <p>Your cheeks are also very grateful.</p>
+      <p>Apparently, you still blush when someone compliments you, giggle at silly jokes and smile at dogs like you have just met a celebrity.</p>
+      <p>Your eyes? Oh, they are obsessed with you.</p>
+      <p>They love how you still stop to look at pretty sunsets, get excited about fairy lights and stare at Christmas decorations even when it's February.</p>
+      <p>Your hands would like to thank you for all the unnecessary little purchases you make because something is "just too cute."</p>
+      <p>We have approximately 14 decorative things that serve absolutely no purpose, but apparently they bring you joy.</p>
+      <p>And your heart?</p>
+      <p>Well, your heart is particularly fond of the fact that you still get excited about things.</p>
+      <p>A birthday cake. A surprise parcel. A new café. A silly little plan.</p>
+      <p>You haven't completely surrendered to the idea that being an adult means being permanently serious, permanently busy and permanently concerned about electricity bills.</p>
+      <p>Although, between us, you should probably start checking those bills.</p>
+      <p>But here is what we really wanted to say.</p>
+      <p>Thank you for not making us grow up faster than necessary.</p>
+      <p>Thank you for still laughing loudly, getting excited over little things, making silly faces, dancing badly and finding reasons to celebrate an ordinary Tuesday.</p>
+      <p>The world will occasionally ask you to be more serious, more practical, more sensible and more grown-up.</p>
+      <p>Please do that when necessary.</p>
+      <p>But don't confuse growing up with becoming boring.</p>
+      <p>We have absolutely no interest in becoming a collection of tired body parts attached to someone who only gets excited about tax refunds.</p>
+      <p>Keep your wonder. Keep your ridiculous enthusiasm. Keep finding magic in the smallest things.</p>
+      <p>We quite like living this life with you.</p>
+      <p>With love, giggles and the occasional backache,</p>
+      <p><strong>Your Body.</strong></p>
+      <blockquote class="kill-shot">P.S. Your knees would like to remind you that being childlike does not mean you can jump off the sofa like you are seven. We are 30. Please behave.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-29";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-29";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

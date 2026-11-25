@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter to My Dear Sensitive Girl — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 34 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter to My Dear Sensitive Girl</h1>
+      <p class="dek">From your heart, which was not hired to host a 24-hour emotional investigation channel.</p>
+
+      <p class="salute"><strong>Dear Girl,</strong></p>
+      <p><strong>Love, Your Heart.</strong></p>
+      <p>Can we have a little chat?</p>
+      <p>First of all, I love you. Very much.</p>
+      <p>But I would also like to know why we are treating every minor inconvenience like the season finale of a television drama.</p>
+      <p>Someone spoke slightly differently to you?</p>
+      <p>We are hurt.</p>
+      <p>Someone forgot to ask how your day was?</p>
+      <p>We are hurt.</p>
+      <p>Someone cancelled plans?</p>
+      <p>We are hurt, but now we're also pretending we didn't want to go anyway.</p>
+      <p>Someone said something five years ago?</p>
+      <p>Excellent. Let's bring that up at 11:46 PM. I was getting ready to sleep, but apparently we are having a retrospective.</p>
+      <p>Darling, I am a heart. I pump blood. I was not hired to host a 24-hour emotional investigation channel.</p>
+      <p>And you know what else?</p>
+      <p>You feel EVERYTHING.</p>
+      <p>A kind stranger remembers your coffee order and suddenly you want to write them a thank-you letter.</p>
+      <p>A friend sends you a thoughtful message and you save it like it's a historical document.</p>
+      <p>You hear a sad song and suddenly you are looking out of the car window like you have just lost the love of your life.</p>
+      <p>I mean, the emotional range in this household is impressive.</p>
+      <p>But here is where I need you to listen.</p>
+      <p>Just because you feel something deeply doesn't mean you have to do something about it immediately.</p>
+      <p>You can be hurt without sending a 14-paragraph explanation.</p>
+      <p>You can be disappointed without deciding someone doesn't care about you.</p>
+      <p>You can love someone without making their happiness your full-time responsibility.</p>
+      <p>And you can forgive someone without giving them another opportunity to ruin your Tuesday.</p>
+      <p>Also, please stop apologising for having feelings.</p>
+      <p>You are not a customer complaint that needs to be resolved.</p>
+      <p>I actually quite like that you notice little things. That you remember details. That you get excited over thoughtful gestures. That you care when someone is having a difficult day.</p>
+      <p>Please don't lose that.</p>
+      <p>Just perhaps stop handing everybody the remote control to your emotional television.</p>
+      <p>Not everyone deserves front-row seats to every feeling you experience.</p>
+      <p>So here is my little request.</p>
+      <p>Keep feeling. Keep caring. Keep getting ridiculously excited about small things.</p>
+      <p>But maybe, just maybe, let some things pass without inviting them to live rent-free in your chest for the next six business months.</p>
+      <p>I have other responsibilities, you know.</p>
+      <p>With love, a little exhaustion and absolutely no plans to become emotionally unavailable,</p>
+      <p><strong>Your Heart.</strong></p>
+      <blockquote class="kill-shot">P.S. That person who hurt your feelings yesterday? I would like to remind you that we still have a perfectly good weekend ahead. Please don't cancel it on my behalf.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-34";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-34";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

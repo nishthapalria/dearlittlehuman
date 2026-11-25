@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter From Your Tummy — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 30 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter From Your Tummy</h1>
+      <p class="dek">Written with great disappointment, considerable acidity and absolutely no peace.</p>
+
+      <p class="salute"><strong>Dear Madam,</strong></p>
+      <p><strong>Love, Your Tummy.</strong></p>
+      <p>I am writing this letter with great disappointment, considerable acidity and absolutely no peace.</p>
+      <p>WE NEED TO TALK.</p>
+      <p>What exactly is your problem with normal food?</p>
+      <p>Every single time we go out, you look at the menu and say, "I will have the spicy one."</p>
+      <p>The waiter asks, "Are you sure? It's very spicy."</p>
+      <p>You: "Oh, I can handle it."</p>
+      <p>CAN YOU?</p>
+      <p>Because I am the one handling it. And frankly, I did not sign up for this.</p>
+      <p>Last Tuesday, you ordered extra spicy schezwan noodles. EXTRA. SPICY.</p>
+      <p>I sent you approximately 17 warning signals.</p>
+      <p>You ignored all of them.</p>
+      <p>You even had the audacity to say, "It's not that spicy."</p>
+      <p>Oh, really? Then why were we drinking water like we'd just crossed the Sahara?</p>
+      <p>And don't even get me started on your relationship with green chillies.</p>
+      <p>You don't eat them. You collect them.</p>
+      <p>Every time someone says, "It's a little spicy," your eyes light up like you've just discovered a new hobby.</p>
+      <p>Meanwhile, I am down here fighting for my life.</p>
+      <p>You also have this ridiculous habit of eating spicy food and then immediately following it with something sweet.</p>
+      <p>As if a spoonful of ice cream is going to undo the decisions of a grown woman.</p>
+      <p>And the next morning?</p>
+      <p>You suddenly become very spiritual.</p>
+      <p>"Please God, let my stomach be okay today."</p>
+      <p>GIRL. GOD WAS NOT AT THE RESTAURANT. YOU WERE.</p>
+      <p>I would also like to address your so-called cheat days.</p>
+      <p>You eat spicy food on Monday, spicy food on Tuesday, and on Wednesday you decide to give me a break by ordering something mildly spicy.</p>
+      <p>MILDLY?</p>
+      <p>I am begging you to discover the existence of potatoes.</p>
+      <p>Listen, I love you. I really do.</p>
+      <p>But could we occasionally eat something that doesn't require an emergency meeting between your taste buds and my digestive system?</p>
+      <p>I would appreciate a little rice, some yoghurt, perhaps a nice, peaceful meal.</p>
+      <p>We don't have to prove anything to a chilli.</p>
+      <p>We are already impressive people.</p>
+      <p>With love, indigestion and very limited patience,</p>
+      <p><strong>Your Tummy.</strong></p>
+      <blockquote class="kill-shot">P.S. The next time you say "Make it extra spicy," I am forwarding your food order to your mother.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-30";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-30";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

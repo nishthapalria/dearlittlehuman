@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter From Your Mirror — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 28 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter From Your Mirror</h1>
+      <p class="dek">I am a mirror, not a comparison calculator. Please let the woman drink her coffee.</p>
+
+      <p class="salute">Dear Girl,</p>
+      <p>Love, Your Mirror.</p>
+      <p>Can we PLEASE have a conversation?</p>
+      <p>Because I am getting tired of this little morning ritual.</p>
+      <p>You wake up, come stand in front of me, look at yourself and say, "Hmm. Not bad."</p>
+      <p>THREE SECONDS LATER.</p>
+      <p>You see a girl on Instagram.</p>
+      <p>And suddenly I am being questioned like I have committed a crime.</p>
+      <p>Why is her skin so clear? Why does her hair look like that? Why does she have such a nice wardrobe? Why does she look so effortlessly beautiful?</p>
+      <p>HELLO? I WAS JUST HERE.</p>
+      <p>And what exactly am I supposed to do when you start zooming into somebody else's photograph and comparing their entire existence to your face at 8:30 in the morning?</p>
+      <p>I am a mirror, not a comparison calculator.</p>
+      <p>You do realise you have a very strange habit, right?</p>
+      <p>You can receive ten compliments and spend the entire evening thinking about one person's slightly unusual expression.</p>
+      <p>Someone says you look lovely. You smile.</p>
+      <p>Someone doesn't notice your new haircut. Suddenly, we're reconsidering our entire appearance.</p>
+      <p>A girl walks into a room looking confident, and instead of thinking, "She looks lovely," you start wondering what is wrong with YOU.</p>
+      <p>Darling, must every beautiful woman become a personal performance review?</p>
+      <p>And don't even get me started on the imaginary competition.</p>
+      <p>You have been competing with women who don't know you exist, women you have never met and women whose lives you have constructed entirely from 12 Instagram pictures.</p>
+      <p>Somewhere, a stranger is simply enjoying her coffee, completely unaware that she has been appointed your unofficial life rival.</p>
+      <p>PLEASE LET THE WOMAN DRINK HER COFFEE.</p>
+      <p>Here is something I wish you understood.</p>
+      <p>You don't have to be the prettiest person in the room to enjoy being in it.</p>
+      <p>You don't have to be the most interesting, the most successful, the most fashionable or the most effortlessly confident.</p>
+      <p>And you certainly don't have to find something wrong with yourself every time you notice something lovely about someone else.</p>
+      <p>There is enough room for everybody to be beautiful, darling.</p>
+      <p>Even you. Especially you.</p>
+      <p>So tomorrow, when you come stand in front of me, can we try something different?</p>
+      <p>Look at yourself without conducting an inspection.</p>
+      <p>Wear the lipstick. Take the picture. Go out. Stop waiting until you look like somebody else's idea of perfect.</p>
+      <p>And occasionally, when you see another beautiful woman, just let her be beautiful.</p>
+      <p>You don't have to become her.</p>
+      <p>I have been looking at you for years. Trust me, there's a rather lovely person standing here already.</p>
+      <p>With love and absolutely no intention of entertaining another comparison session,</p>
+      <p>Your Mirror.</p>
+      <blockquote class="kill-shot">P.S. I am reflective, not responsible for your self-esteem. Please stop shouting at me.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-28";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-28";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

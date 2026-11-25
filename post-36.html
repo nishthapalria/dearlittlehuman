@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter to the Girl Who Cried After a Cheat Meal — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 36 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter to the Girl Who Cried After a Cheat Meal</h1>
+      <p class="dek">You are a human being, not a school project that needs to be submitted in perfect condition.</p>
+
+      <p class="salute"><strong>Dear Girl Who Cried After Eating a Cheat Meal,</strong></p>
+      <p>Darling.</p>
+      <p>I need you to put the measuring tape down for a minute.</p>
+      <p>We need to talk about that meal.</p>
+      <p>I watched you eat something delicious, enjoy approximately seven minutes of happiness, and then spend the next three hours behaving as though you had committed an international crime.</p>
+      <p>You checked your stomach. You regretted the dessert. You promised to be extra good tomorrow.</p>
+      <p>Extra good?</p>
+      <p>Sweetheart, you are a human being, not a school project that needs to be submitted in perfect condition.</p>
+      <p>I gave you taste buds for a reason. I made mangoes, pasta, chocolate, pizza, potatoes and approximately a million other delicious things. Did you really think all of that was just decorative?</p>
+      <p>You spend so much time trying to make your body smaller that you forget it is the very thing carrying you through this enormous experience called life.</p>
+      <p>It takes you to see sunsets. It lets you hug people you love, dance in your kitchen, run towards someone you are excited to meet and lie in bed laughing at absolutely nothing.</p>
+      <p>And you are being mean to it because you ate an extra slice of pizza?</p>
+      <p>Darling, please.</p>
+      <p>Your body is not a maths problem that needs correcting after every meal.</p>
+      <p>You do not have to earn your food through exercise. You do not have to punish yourself tomorrow for enjoying yourself today.</p>
+      <p>And please stop treating your reflection like a performance review.</p>
+      <p>I made you to experience life, not spend every waking moment negotiating with your waistline.</p>
+      <p>Eat your food. Take care of yourself. Move because it feels good. Rest when you need to.</p>
+      <p>And for heaven's sake, let a good meal remain a good meal.</p>
+      <p>With love,</p>
+      <p><strong>The Universe</strong></p>
+      <blockquote class="kill-shot">P.S. I have galaxies expanding at unimaginable speeds and you are worried about your stomach looking different after dinner. Please let us both have a peaceful evening.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-36";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-36";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

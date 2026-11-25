@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter to the Girl Who Thinks Too Much — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 33 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter to the Girl Who Thinks Too Much</h1>
+      <p class="dek">Tuesday, darling. It is Friday.</p>
+
+      <p class="salute">Dear Overthinker,</p>
+      <p>First of all, can you PLEASE sit down?</p>
+      <p>You have been mentally arguing with someone who isn't even in the room for the last three hours. The other person is probably eating dinner, watching Netflix, moisturising their face, living a beautiful little life. And here you are, preparing your seventh closing statement for a conversation that happened on Tuesday.</p>
+      <p>Tuesday, darling. It is Friday.</p>
+      <p>Also, what is this habit of saying something perfectly normal and then spending the next 48 business hours investigating whether it sounded weird?</p>
+      <p>You said, "Oh, that's nice."</p>
+      <p>THAT'S NICE.</p>
+      <p>Not "I have a secret agenda against you." Not "I have been planning your downfall since 2017." Just that's nice.</p>
+      <p>Please stop conducting a criminal investigation into your own sentences.</p>
+      <p>And the future? Oh, the future is your favourite Netflix series. Except you have watched all 19 seasons in your head, including the tragic ending, the financial crisis, the embarrassing family gathering and the scene where everybody is disappointed in you.</p>
+      <p>Nobody has even confirmed the first episode.</p>
+      <p>You also have this adorable little habit of ruining perfectly good days by remembering something embarrassing from six years ago. Congratulations. Your brain has successfully turned a peaceful Wednesday afternoon into a documentary about your greatest failures.</p>
+      <p>But listen.</p>
+      <p>Not every silence is awkward. Not every delayed reply is a rejection. Not everybody is secretly evaluating your personality. And sometimes people really are just busy taking a shower.</p>
+      <p>You don't need to become more interesting, more impressive, more agreeable or more perfectly worded to deserve a comfortable existence.</p>
+      <p>You are allowed to be a little awkward. A little confused. A little underdressed for the occasion. You are allowed to leave a conversation without reviewing the footage afterwards.</p>
+      <p>And please, for the love of everything, stop trying to prepare yourself for every possible disappointment.</p>
+      <p>Life is not an examination and you are not going to get extra marks for anticipating all 47 ways things could go wrong.</p>
+      <p>Go eat something. Drink water. Wear the outfit. Send the message. Make the plan.</p>
+      <p>And if something embarrassing happens?</p>
+      <p>Well, congratulations. You are a human being. Very unfortunate, but apparently unavoidable.</p>
+      <p>With love</p>
+      <p>Your slightly concerned and very exhausted nervous system.</p>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-33";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-33";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

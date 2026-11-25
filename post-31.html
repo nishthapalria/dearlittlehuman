@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter to the Introvert, From Your Brain — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 31 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter to the Introvert, From Your Brain</h1>
+      <p class="dek">Listen. I have a proposal. Let us go out.</p>
+
+      <p class="salute">Dear Introvert,</p>
+      <p>Love, Your Brain.</p>
+      <p>Listen. I have a proposal.</p>
+      <p>LET'S GO OUT.</p>
+      <p>I know, shocking. But hear me out.</p>
+      <p>There is a whole world outside this bedroom. Restaurants. Bookstores. Cute little cafés. People wearing interesting outfits. Maybe even someone who could become our new best friend.</p>
+      <p>We could have a lovely evening. Order something delicious. Laugh at someone's jokes. Discover a new place. Come home with a cute little story to tell.</p>
+      <p>Sounds wonderful, doesn't it?</p>
+      <p>So why are you still sitting here wearing the same T-shirt?</p>
+      <p>I have already planned the entire evening, by the way.</p>
+      <p>I have imagined us walking into a café looking effortlessly cool. Someone compliments our outfit. We say something witty. Everybody laughs. We make a new friend. We become regulars at a charming little coffee shop.</p>
+      <p>A whole cinematic universe.</p>
+      <p>And then you say, "But what if it's awkward?"</p>
+      <p>WHAT IF IT'S NOT?</p>
+      <p>What if people are nice? What if we actually enjoy ourselves? What if we discover that going outside is, in fact, a perfectly acceptable human activity?</p>
+      <p>But no. You need to know who is coming, what time everyone is arriving, whether we will have to introduce ourselves, where we will sit, what we will talk about and whether we can leave early.</p>
+      <p>At this point, going out requires a project proposal, three approvals and a risk assessment.</p>
+      <p>And don't even get me started on the getting-ready process.</p>
+      <p>You spend two hours choosing an outfit, look absolutely adorable, and then decide you are too comfortable to leave.</p>
+      <p>I HAVE NO WORDS.</p>
+      <p>Also, why do you keep saying you want more friends but treat every invitation like a suspicious job interview?</p>
+      <p>Someone says, "Come over!"</p>
+      <p>You: "Let me see."</p>
+      <p>SEE WHAT? THE TERMS AND CONDITIONS?</p>
+      <p>Look, I respect your love for solitude. I really do. Our bed is lovely. Our snacks are reliable. Nobody here asks us what we do for a living.</p>
+      <p>But perhaps we could occasionally experience something that doesn't happen within a five-foot radius of our sofa.</p>
+      <p>I am not asking you to become the life of the party. Please don't. We both know that would require additional training.</p>
+      <p>Just come outside.</p>
+      <p>We can be quiet. We can observe people. We can have one conversation and call it a successful evening.</p>
+      <p>And if we don't enjoy ourselves, we can come home and discuss everyone in great detail.</p>
+      <p>See? WIN-WIN.</p>
+      <p>With love and several cancelled social invitations,</p>
+      <p>Your Brain.</p>
+      <blockquote class="kill-shot">P.S. I have already picked an outfit. Don't you dare cancel on me again.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-31";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-31";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

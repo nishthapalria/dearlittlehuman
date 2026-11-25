@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter From the Girl You Were Before Everything Happened — Curry and Commentary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Curry and Commentary</h1>
+    <p>Extra by nature. Unbothered by choice.</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill active" href="index.html#sec-letters">Letters</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Nov 24</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 35 · <a href="index.html?genre=Letters" style="color:inherit;">Letters</a></div>
+    <div class="entry">
+      <h1 class="post-title">A Letter From the Girl You Were Before Everything Happened</h1>
+      <p class="dek">Girl. It is pizza. Let us go get it.</p>
+
+      <p class="salute">Dear Girl,</p>
+      <p><strong>Love, The Girl You Were Before Everything Happened.</strong></p>
+      <p>Hey.</p>
+      <p>Remember me?</p>
+      <p>The girl who had hobbies, random crushes, questionable fashion choices and absolutely no interest in analysing every human interaction?</p>
+      <p>Yeah. That one.</p>
+      <p>I have been meaning to write to you.</p>
+      <p>First, I am proud of you. Really.</p>
+      <p>You went through things you never thought you would have to go through. You picked yourself up, figured things out, learned a few hard lessons and somehow kept going.</p>
+      <p>But can I ask you something?</p>
+      <p>When did we become a walking TED Talk about our trauma?</p>
+      <p>Every conversation somehow circles back to what happened.</p>
+      <p>Someone asks how we are doing.</p>
+      <p>You: "I've been working on myself."</p>
+      <p>Someone asks what we have been up to.</p>
+      <p>You: "A lot of healing, honestly."</p>
+      <p>Someone asks if we want pizza.</p>
+      <p>You: "I think my relationship with food has evolved since my healing journey."</p>
+      <p>GIRL. IT'S PIZZA.</p>
+      <p>And this constant need to understand EVERYTHING?</p>
+      <p>Why did they do that? Why did I react like that? What does this feeling mean? Is this a trigger? Is this a pattern? Is this another lesson the universe is trying to teach me?</p>
+      <p>At this point, even the universe might be asking you to stop scheduling meetings.</p>
+      <p>I know you want to make sure nothing like that ever happens again. I understand why.</p>
+      <p>But sweetheart, you cannot spend the rest of your life preparing for a repeat performance of your worst days.</p>
+      <p>And please stop introducing yourself to yourself as the girl who went through something terrible.</p>
+      <p>You are also the girl who laughs at stupid jokes, loves a good outfit, gets unnecessarily excited about little things, has weird food opinions and occasionally makes absolutely terrible decisions.</p>
+      <p>You contain multitudes, darling. Not just character development.</p>
+      <p>You don't have to turn every painful experience into wisdom. Some things can simply be awful. Some days you can be happy without understanding why. Some days you can be silly without calling it progress.</p>
+      <p>And you know what?</p>
+      <p>You are allowed to have a personality outside your healing journey.</p>
+      <p>Actually, I would LOVE to meet her again.</p>
+      <p>Let's go get that pizza.</p>
+      <p>We can talk about something completely ridiculous.</p>
+      <p>With love,</p>
+      <p><strong>The Girl You Were Before Everything Happened.</strong></p>
+      <blockquote class="kill-shot">P.S. You don't have to become who you were before. I just want you to discover how many other versions of you are still waiting to be met.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div class="share-row">
+  <button id="native-share-btn" class="share-btn">Share</button>
+  <a id="wa-share-btn" class="share-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button id="copy-link-btn" class="share-btn">Copy Link</button>
+</div>
+
+<script>
+(function () {
+  const pageUrl = window.location.href;
+  const pageTitle = document.title.replace(" — Curry and Commentary", "");
+  const shareText = pageTitle + " — " + pageUrl;
+
+  const nativeShareBtn = document.getElementById('native-share-btn');
+  if (nativeShareBtn) {
+    if (navigator.share) {
+      nativeShareBtn.addEventListener('click', () => {
+        navigator.share({ title: pageTitle, url: pageUrl }).catch(() => {});
+      });
+    } else {
+      nativeShareBtn.style.display = 'none';
+    }
+  }
+
+  const waBtn = document.getElementById('wa-share-btn');
+  if (waBtn) {
+    waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = original; }, 1600);
+      }).catch(() => {});
+    });
+  }
+})();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-35";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-35";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Written by the girl who refuses to let her days be boring.</footer>
+</div>
+</body>
+</html>

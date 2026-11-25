@@ -414,3 +414,6 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
   #top .entry > p.dek + p::first-letter { all: unset; }
   #top .entry > p:last-child { grid-column: 2; grid-row: 2; align-self: start; }
 }
+
+/* letters: no drop cap on the salutation line */
+.entry .dek + p.salute::first-letter { all: unset; }
